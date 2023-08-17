@@ -4,10 +4,15 @@ Feature: Search for the product
 ### Available products: "orange", "apple", "pasta", "cola"
 ### Prepare Positive and negative scenarios
 
+
   Scenario:
-    When he calls endpoint "https://waarkoop-server.herokuapp.com/api/v1/search/demo/orange"
-    Then he sees the results displayed for apple
     When he calls endpoint "https://waarkoop-server.herokuapp.com/api/v1/search/demo/apple"
-    Then he sees the results displayed for mango
+    Then he sees the results displayed for searched product
+
+  Scenario:
+    When he calls endpoint "https://waarkoop-server.herokuapp.com/api/v1/search/demo/cola"
+    Then he sees the results displayed for "cola"
+
+  Scenario:
     When he calls endpoint "https://waarkoop-server.herokuapp.com/api/v1/search/demo/car"
-    Then he doesn not see the results
+    Then he does not see the results
