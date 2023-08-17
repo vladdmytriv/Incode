@@ -1,6 +1,5 @@
 import io.restassured.response.Response;
 import org.junit.Test;
-import starter.stepdefinitions.CarsAPI;
 import starter.stepdefinitions.SearchStepDefinitions;
 
 public class ProductTests {
